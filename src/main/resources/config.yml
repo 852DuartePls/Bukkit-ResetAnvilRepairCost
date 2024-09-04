@@ -1,0 +1,9 @@
+# Values that will be used by the plugin.
+# Any item that already surpassed the max repair cost prior of the installation of this plugin will be set to the adjusted cost
+# by placing it in an anvil and clicking on it again.
+
+values:
+  # The maximum repair cost in Levels that an item can reach before it gets set to the adjusted cost.
+  max_repair_cost: 35
+  # The adjusted repair cost in Levels that will be set to the item when it surpasses the max repair cost.
+  adjusted_cost: 20
