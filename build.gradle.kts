@@ -4,7 +4,7 @@ plugins {
 
 group = "me.duart"
 version = "0.0.1"
-description = "ResetAnvilRepairCost"
+description = "Reset Anvil Repair Cost"
 
 repositories {
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
