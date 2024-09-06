@@ -1,7 +1,12 @@
 name: ResetAnvilRepairCost
-version: '0.0.1'
+version: '0.0.2'
 main: me.duart.resetAnvilRepairCost.ResetAnvilRepairCost
 description: | 
   Keeps the repair cost of an item in an anvil at a 
   lower level to prevent the TOO EXPENSIVE! text
 api-version: '1.20'
+
+commands:
+  resetrepaircost:
+    description: Reloads the plugin configuration
+    permission: resetrepaircost.admin
