@@ -37,8 +37,8 @@ public final class ResetAnvilRepairCost extends JavaPlugin implements Listener {
         console.sendMessage(ChatColor.YELLOW + PluginName + " || enabled!");
         console.sendMessage(ChatColor.YELLOW + PluginName + " || Max Repair Cost: " + ChatColor.GREEN + MAX_REPAIR_COST);
         console.sendMessage(ChatColor.YELLOW + PluginName + " || Adjusted Cost: " + ChatColor.GREEN + ADJUSTED_COST);
-        Objects.requireNonNull(getCommand("resetrepaircost")).setExecutor(new ReloadCommand(this));
-        Objects.requireNonNull(getCommand("resetrepaircost")).setTabCompleter(new ReloadCommand(this));
+        Objects.requireNonNull(getCommand("anvilresetcost")).setExecutor(new ReloadCommand(this));
+        Objects.requireNonNull(getCommand("anvilresetcost")).setTabCompleter(new ReloadCommand(this));
         getServer().getPluginManager().registerEvents(this, this);
     }
 

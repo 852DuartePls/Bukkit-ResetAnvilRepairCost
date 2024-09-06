@@ -1,4 +1,4 @@
-name: ResetAnvilRepairCost
+name: AnvilCost
 version: '0.0.2'
 main: me.duart.resetAnvilRepairCost.ResetAnvilRepairCost
 description: | 
