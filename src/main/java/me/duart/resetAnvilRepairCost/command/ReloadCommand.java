@@ -11,18 +11,18 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 public class ReloadCommand implements CommandExecutor, TabCompleter {
-    private final ResetAnvilRepairCost plugin;
+    private final ResetAnvilRepairCost anvilCost;
 
     public ReloadCommand(ResetAnvilRepairCost plugin) {
-        this.plugin = plugin;
+        this.anvilCost = plugin;
     }
 
     @Override
-    public boolean onCommand(@Nonnull CommandSender sender,@Nonnull Command command,@Nonnull String label,@Nonnull String[] args) {
+    public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] args) {
         String pluginName = ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "AnvilCost" + ChatColor.DARK_GRAY + "] ";
 
         if (args.length == 0) {
-            sender.sendMessage(pluginName + ChatColor.WHITE + plugin.getDescription());
+            sender.sendMessage(pluginName + ChatColor.WHITE + anvilCost.getDescription().getVersion());
             return true;
         }
 
@@ -31,13 +31,14 @@ public class ReloadCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(pluginName + ChatColor.RED + "You don't have permission to use this command!");
                 return true;
             }
-            plugin.onReload();
+            anvilCost.onReload();
             sender.sendMessage(pluginName + ChatColor.GREEN + "Reloaded the plugin configuration!");
+        } else {
+            sender.sendMessage(pluginName + ChatColor.RED + "Invalid argument!");
         }
 
         return false;
     }
-
 
     @Override
     public List<String> onTabComplete(@Nonnull CommandSender commandSender, @Nonnull Command command, @Nonnull String s, @Nonnull String[] strings) {
