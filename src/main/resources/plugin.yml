@@ -1,12 +1,14 @@
 name: AnvilCost
+author: 852Duarte
 version: 'v0.0.3'
 main: me.duart.resetAnvilRepairCost.ResetAnvilRepairCost
-description: | 
-  Keeps the repair cost of an item in an anvil at a 
-  lower level to prevent the TOO EXPENSIVE! text
+description: |
+  Maintains the repair cost of an item at an adjusted
+  level to avoid the "TOO EXPENSIVE!" warning.
 api-version: '1.20'
 
 commands:
   anvilresetcost:
     description: Reloads the plugin configuration
     permission: resetrepaircost.admin
+    aliases: [anvilcost]
