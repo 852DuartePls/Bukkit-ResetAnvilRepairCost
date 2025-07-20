@@ -2,7 +2,15 @@
 # text present prior to the installation of this plugin will be reset to the value stipulated
 # in “adjusted_cost” when placed on the anvil and clicked again.
 
+# Admin Permissions: resetrepaircost.admin (Required to reload the plugin configuration without restarting the server)
+# User Permission: resetrepaircost.user
+
 value:
+  # Enables or disables the plugin.
+  enabled: true
+  # Enables or disables the permission check.
+  # (If set to true, all players won't require the permission, and if set to false, the permission will be required)
+  bypass-permission: true
   # The maximum Repair Cost value an item will reach before being reset to adjusted cost.
   max_repair_cost: 35 # Default: 35
   # The value to which the items will be set once the specified limits have been exceeded.

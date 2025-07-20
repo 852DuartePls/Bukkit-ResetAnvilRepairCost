@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "me.duart"
-version = "0.0.3"
+version = "0.0.5"
 description = "Reset Anvil Repair Cost"
 
 repositories {
